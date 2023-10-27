@@ -30,7 +30,6 @@ function generateCVV() {
 }
 
 export const generateRandomCardDetails = (name: string) => {
-  console.log(generateRandom16DigitNumber());
   const currentDate = new Date();
   const validThru = new Date(
     currentDate.getFullYear() + 5,
@@ -47,7 +46,6 @@ export const generateRandomCardDetails = (name: string) => {
     frozen: false,
     cancelled: false,
   };
-  console.log(newCardDetails);
   return newCardDetails;
 };
 
