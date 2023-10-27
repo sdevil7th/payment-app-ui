@@ -10,7 +10,7 @@
       flat
       color="transparent"
       text-color="blue-10"
-      class="functionBtnItem"
+      class="text-caption text-weight-medium functionBtnItem"
       :disable="selectedCardDetails.cardNumber === DUMMY_NAME"
       @click="toggleFreezeCard"
     >
@@ -21,7 +21,7 @@
       flat
       color="transparent"
       text-color="blue-10"
-      class="functionBtnItem"
+      class="text-caption text-weight-medium functionBtnItem"
     >
       <img src="../assets/icons/Set-spend-limit.svg" class="q-mb-sm" />
       Set spend limit
@@ -30,7 +30,7 @@
       flat
       color="transparent"
       text-color="blue-10"
-      class="functionBtnItem"
+      class="text-caption text-weight-medium functionBtnItem"
     >
       <img src="../assets/logos/GPay.svg" class="q-mb-sm" />
       Add to GPay
@@ -39,7 +39,7 @@
       flat
       color="transparent"
       text-color="blue-10"
-      class="functionBtnItem"
+      class="text-caption text-weight-medium functionBtnItem"
     >
       <img src="../assets/icons/Replace-card.svg" class="q-mb-sm" />
       Replace card
@@ -48,7 +48,7 @@
       flat
       color="transparent"
       text-color="blue-10"
-      class="functionBtnItem"
+      class="text-caption text-weight-medium functionBtnItem"
       :disable="selectedCardDetails.cardNumber === DUMMY_NAME"
       @click="confirmCancel = true"
     >
@@ -104,7 +104,7 @@ const confirmCancel = ref(false);
   background: #edf3ff;
 }
 .functionBtnItem {
-  max-width: 70px;
+  max-width: 60px;
   padding: 10px 0 10px 0;
   border-radius: 10px;
   text-transform: none;

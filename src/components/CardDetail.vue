@@ -68,10 +68,32 @@
                 <img src="../assets/icons/megaphone.svg" />
               </div>
               <div class="txnDetailContainer">
-                <p class="text-grey-10 text-weight-bold q-mb-xs">
-                  {{ txn.name }}
-                </p>
-                <p class="text-grey-5 q-mb-md">{{ txn.date }}</p>
+                <div class="row justify-between items-start">
+                  <div>
+                    <p class="text-grey-10 text-weight-bold q-mb-xs">
+                      {{ txn.name }}
+                    </p>
+                    <p class="text-grey-5 q-mb-md">{{ txn.date }}</p>
+                  </div>
+                  <div class="row items-center">
+                    <p
+                      v-if="txn.txnType === 'credit'"
+                      class="text-primary text-weight-bold q-mr-md q-mb-none"
+                    >
+                      + S$ {{ txn.amount }}
+                    </p>
+                    <p
+                      v-else
+                      class="text-grey-10 text-weight-bold q-mr-md q-mb-none"
+                    >
+                      - S$ {{ txn.amount }}
+                    </p>
+                    <img
+                      src="../assets/icons/next.svg"
+                      class="txnDetailLinkIcon"
+                    />
+                  </div>
+                </div>
                 <div class="row items-center q-mt-md">
                   <div class="q-mr-sm descIconContainer">
                     <img src="../assets/icons/card-white.svg" />
@@ -80,21 +102,6 @@
                     txn.desc
                   }}</span>
                 </div>
-              </div>
-              <div class="row items-center">
-                <p
-                  v-if="txn.txnType === 'credit'"
-                  class="text-primary text-weight-bold q-mr-md q-mb-none"
-                >
-                  + S$ {{ txn.amount }}
-                </p>
-                <p
-                  v-else
-                  class="text-grey-10 text-weight-bold q-mr-md q-mb-none"
-                >
-                  - S$ {{ txn.amount }}
-                </p>
-                <img src="../assets/icons/next.svg" class="txnDetailLinkIcon" />
               </div>
             </div>
           </div>
@@ -162,7 +169,7 @@ const { selectedCardTxns } = storeToRefs(accStore);
 .scrollContent {
   pointer-events: all;
   min-height: calc(100vh - 530px);
-  min-width: 420px;
+  min-width: 375px;
   width: 100%;
 }
 .viewAllTxnsLink {
