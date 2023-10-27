@@ -169,7 +169,7 @@ const { selectedCardTxns } = storeToRefs(accStore);
 .scrollContent {
   pointer-events: all;
   min-height: calc(100vh - 530px);
-  min-width: 375px;
+  min-width: 325px;
   width: 100%;
 }
 .viewAllTxnsLink {
